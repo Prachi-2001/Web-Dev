@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+</head>
+
+<body>
+    <div>
+        <!-- here action attribute is use for containing information of server file in that data will store  -->
+        <form action="">
+            <h1 id="sos">Payment Form</h1>
+            <h2>Contact information</h2>
+            <fieldset>
+                <p>Required fileds are followed by *</p>
+                <span>Full Name * : <input type="text" name="name" placeholder="Enter Your full name"
+                        required></span><br>
+                <!-- name attribute should be same for radio input coz there is one radio mark from many options -->
+                <!-- id sholud be unique -->
+                <span> Gender * : <input type="radio" name="gender" id="male" required> Male
+                    <input type="radio" name="gender" id="female" required>Female
+                    <input type="radio" name="gender" id="Other" required>Other
+                </span>
+                <br>
+                <span>
+                    Address : <br> <textarea name="adress" id="addr" cols="50" rows="5"
+                        placeholder="Enter your current address"></textarea>
+                </span>
+                <br>
+                <p>Email * : <input type="email" name="email" id="email" placeholder="Enter your valid email_id"
+                        required></p>
+                <p>Pincode : <input type="text" name="pincode" id="pincode" placeholder="Enter pincode"></p>
+                <p>Age * : <input type="number" name="num" id="ag" min="0" max="50" required></p>
+                <span>Do you have <strong>Aadhar Card </strong> : Yes <input type="radio" name="aadhar" id="ad"
+                        color="green"> No <input type="radio" name="aadhar" id="addd"><br>
+
+                    <span>Choose File url from your Computer <input type="file" name="file" id="file"></span>
+                </span>
+            </fieldset>
+            
+            <!--Payment details of user-->
+            <h2>Payment Details</h2>
+            <fieldset>
+                <p>Card Type * :
+                    <select name="card_type" id="card_type" required>
+                        <option value="">--select card type--</option>
+                        <option value="Visa">Visa</option>
+                        <option value="Rupay">Rupay</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="Rtgf">RTGF</option>
+                    </select>
+                </p>
+                <p>Card Number * : <input type="number" name="card_number" id="card_num" required></p>
+                <p>Expiration date * : <input type="date" name="exp_date" id="exp_date" required></p>
+                <p>CVV * <input type="password" name="Cvv" id="cvv" required></p>
+                <input type="Submit" value="Pay now">
+                <input type="Reset"><br>
+            </fieldset>
+            <div>
+                <button>
+                    <a href="#sos">Top to the page</a>
+                </button>
+            </div>
+
+            <!-- Internal css is below -->
+            <style>
+                fieldset {
+                    background-color: #eeeeee;
+                    padding: 4px;
+
+                }
+                legend {
+                    background-color: gray;
+                    color: white;
+                    padding: 5px 10px;
+                }
+
+                input {
+                    margin: 5px;
+                }
+
+                h1 {
+                    text-align: center;
+                }
+                a:link{
+                    text-decoration: none;
+                }
+            </style>
+        </form>
+    </div>
+</body>
+</html>
